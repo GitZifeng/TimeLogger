@@ -59,7 +59,7 @@ namespace TimeLogger
                 UpdateDgv();
                 if (runTime == 0)
                     runTime = DateTime.Now.ToUnixTimeStamp();
-                if(runTime.OutTimeCheck(20*60))
+                if(Program.uiConfig.Remind&runTime.OutTimeCheck(20*60))
                 {
                     if (Program.frmRemind == null)
                         Program.frmRemind = new FrmRemind();
